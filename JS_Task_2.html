@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task 2</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="input1"/>
+        <button type="button" onclick="validate()">Submit</button>
+    </form>
+    <p id="res"></p>
+   <script>
+    function validate() {
+        var inputElement = document.getElementById("input1");
+        var inputValue = inputElement.value;
+        var arr = inputValue.split(' '); // Split the input string by spaces
+        arr.sort();
+        var str = arr.join(' '); // Join the sorted array with spaces
+        document.getElementById("res").textContent = "The sorted string is: " + str;
+    }
+   </script> 
+</body>
+</html>
